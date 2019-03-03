@@ -8,12 +8,14 @@
 
 function reverse(str) {
     const input = Array.from(str);
-    var revStr = "";
+    /* var revStr = "";
 
     for (let i = input.length - 1; i >= 0 ; i-- ) {
         revStr += input[i];
     }
-    return revStr;
+    return revStr; */
+
+    return input.reverse().join('');
 }
 
 module.exports = reverse;
