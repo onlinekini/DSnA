@@ -8,11 +8,14 @@
 
 function reverse(str) {
 
-    let revStr = "";
+    /* let revStr = "";
     for (let char of str ) {
         revStr = char + revStr 
     }
-    return revStr;
+    return revStr; */
+
+    // Best solutions
+    return str.split('').reduce((reversed = "", strChar) => {return strChar + reversed})
 
     //return str.split('').reverse().join('');
 }

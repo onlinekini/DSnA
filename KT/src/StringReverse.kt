@@ -2,8 +2,9 @@ fun main (args : Array<String>) {
 
     //print(reverseString("Vivekanand !!"))
 
-    print(reverseString2("Vivekanand !!"))
+    //print(reverseString2("Vivekanand !!"))
 
+    print(reverseStringBest("Vivekanand !!"))
 }
 
 
@@ -21,4 +22,8 @@ fun reverseString2(inputStr : String) : String {
     var charStr =  inputStr.toCharArray();
     charStr.reverse();
     return String(charStr);
+}
+
+fun reverseStringBest(inputStr : String) : String {
+    return inputStr.toCharArray().fold("") {reverse, strChar -> strChar + reverse}
 }
